@@ -1,4 +1,4 @@
-import {articles} from "../data"
+import {articles} from "../components/data"
 import { useLocation } from "react-router-dom";
 // import SearchBar from "../SearchBar";
 

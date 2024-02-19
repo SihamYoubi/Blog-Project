@@ -1,11 +1,12 @@
 import './App.css';
 import Header from './components/NavBar';
-import Home from './components/pages/Home';
-import Posts from './components/pages/Posts';
-import Login from './components/pages/Login';
-import Register from './components/pages/Register';
-import Welcome from './components/pages/Welcome';
+import Home from './pages/Home';
+import Posts from './pages/Posts';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Welcome from './pages/Welcome';
 // import Footer from './components/Footer';
+import Admin from './pages/Admin/Admin';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import axios from 'axios';
 import { Toaster } from 'react-hot-toast';
@@ -16,25 +17,6 @@ axios.defaults.baseURL = 'http://localhost:3000';
 axios.defaults.withCredentials = true;
 
 function App() {
-    ///////////permission reading articles/////////
-    // const [user, setUser] = useState({ email: '', password: '' });
-    // useEffect(() => {
-    //         axios
-    //             .get('http://localhost:5000/login' , user)
-    //             .then(({ data }) => {
-    //                 setUser(data);
-    //                 console.log('data', user);
-    //             })
-    //             .catch((error) => {
-    //                 console.error('Error fetching user:', error);
-    //             });
-
-    // }, []);
-
-    // console.log('user from axios', user);
-    // console.log('user : ', user);
-    /////////////////////////////////////////////////////////////////////////////
-
     const [user, setUser] = useState(false);
 
     useEffect(() => {
@@ -51,7 +33,7 @@ function App() {
         <div className='page-container'>
             <div className='container'>
                 <BrowserRouter>
-                    <Header user={user} />
+            {/* <Header user={user} /> */}
                     <Toaster
                         position='top-center'
                         toastOptions={{ duration: 1000 }}
@@ -73,6 +55,8 @@ function App() {
                         />
 
                         <Route path='/logout' element={!user && <Welcome />} />
+                        {/* admin */}
+                        <Route path='/admin' element={<Admin />} />
                     </Routes>
                 </BrowserRouter>
                 {/* <Footer /> */}

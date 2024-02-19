@@ -1,4 +1,4 @@
-import homepage from '../../images/homepage.jpg'
+import homepage from '../images/homepage.jpg'
 
 export default function Welcome ()  {
 return (
