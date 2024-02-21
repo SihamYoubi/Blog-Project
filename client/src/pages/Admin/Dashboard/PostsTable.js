@@ -35,12 +35,7 @@ const rows = [
   createData(1, 'Cupcake', 305, 3.7),
   createData(2, 'Donut', 452, 25.0),
   createData(3, 'Eclair', 262, 16.0),
-  createData(4, 'Frozen yoghurt', 159, 6.0),
-  createData(5, 'Gingerbread', 356, 16.0),
-  createData(6, 'Honeycomb', 408, 3.2),
-  createData(7, 'Ice cream sandwich', 237, 9.0),
-  createData(8, 'Jelly Bean', 375, 0.0),
-  createData(9, 'KitKat', 518, 26.0),
+ 
  
 ];
 
@@ -287,7 +282,7 @@ export default function PostsTable() {
         <EnhancedTableToolbar numSelected={selected.length} />
         <TableContainer>
           <Table
-            sx={{ minWidth: 750 }}
+             sx={{ minWidth: 750 }}
             aria-labelledby="tableTitle"
             size={dense ? 'small' : 'medium'}
           >
@@ -324,6 +319,7 @@ export default function PostsTable() {
                         }}
                       />
                     </TableCell>
+
                     <TableCell
                       component="th"
                       id={labelId}
@@ -332,8 +328,9 @@ export default function PostsTable() {
                     >
                       {row.name}
                     </TableCell>
-                    <TableCell align="right">{row.calories}</TableCell>
-                    <TableCell align="right">{row.fat}</TableCell>
+
+                    <TableCell >{row.calories}</TableCell>
+                    <TableCell >{row.fat}</TableCell>
                     
                   </TableRow>
                 );
@@ -344,7 +341,7 @@ export default function PostsTable() {
                     height: (dense ? 33 : 53) * emptyRows,
                   }}
                 >
-                  <TableCell colSpan={6} />
+                  {/* <TableCell colSpan={6} /> */}
                 </TableRow>
               )}
             </TableBody>

@@ -7,7 +7,7 @@ export default function BasicArea() {
             style={{
                 
                 position: 'absolute',
-                top:'7%',
+                top:'0.2%',
                 left: '10%',
             }}
         >
