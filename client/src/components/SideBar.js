@@ -188,19 +188,21 @@ export default function MiniDrawer() {
                         <Divider />
 
                 <List>
-                    <ListItem>
+                    <ListItem >
                         <ListItemButton
                             sx={{
-                                 minHeight: 48,
-                                  justifyContent: open ? 'initial' : 'center',
-                                  px: 2.5,
+                                   minHeight: 48,
+                                   minWidth: 'auto',
+                                   justifyContent: open ? 'initial' : 'center',
+                                    px: 2,
                                  position: 'fixed',
                                  bottom: 10,
+                                 left:0
                             }}
                         >
                             <ListItemIcon
                                 sx={{
-                                    // minWidth: 0,
+                                    minWidth: 0,
                                     mr: open ? 3 : 0,
                                     justifyContent: 'center',
                                 }}
@@ -210,15 +212,16 @@ export default function MiniDrawer() {
                                     sx={{
                                         position: 'fixed',
                                         bottom: 10,
-                                        left: 20,
+                                         left: 20,
                                     }}
                                 />
                             </ListItemIcon>
                             <ListItemText
                                         primary="Logout"
-                                        sx={{ opacity: open ? 1 : 0, position:'fixed',
+                                        sx={{ opacity: open ? 1 : 0, 
+                                            position:'fixed',
                                     bottom: 10,
-                                    left:60,
+                                     left:60,
                                  
                                     }}
                                     />
